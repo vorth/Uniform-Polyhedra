@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>{{ title }}</title>
+
+  <meta name="description" content="{{ description }}">
+  <meta name="keywords" content="uniform,polyhedra,vZome,Zometool,zome,geometry">
+
+  <meta property="og:site_name" content="Uniform Polyhedra">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:image" content="{{ image }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/docs">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="{{ title }}">
+  <meta property="twitter:description" content="{{ description }}">
+  <meta property="twitter:image" content="{{ image }}">
+
+  <!-- Enable the vzome-viewer custom element -->
+  <script type="module" src="https://www.vzome.com/modules/vzome-viewer.js"></script>
+
+</head>
+<body>
+
+  <div style="position: relative">
+    <h1>{{ title }}</h1>
+
+    <a href="/" style="position: absolute; top: 0; right: 1rem;">Home</a>
+  </div>
+
+  <vzome-viewer style="width: 100%; height: 80dvh" src="{{ vzome }}" >
+    <img  style="width: 100%" src="{{ image }}" >
+  </vzome-viewer>
+
+</body>
+</html>

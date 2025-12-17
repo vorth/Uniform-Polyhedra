@@ -1,1 +1,8 @@
 .DS_Store
+_site/
+
+.yarn/
+
+.pnp.cjs
+
+.pnp.loader.mjs
