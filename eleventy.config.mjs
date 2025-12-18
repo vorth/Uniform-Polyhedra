@@ -40,11 +40,12 @@ export default function (eleventyConfig)
       const parts = inputPath.split('/');
       const filename = parts[parts.length - 1].replace('.vZome', '');
       const folder = parts.length > 1 ? parts[parts.length - 2] : '';
-      const vzomeUrl = "../../" + inputPath;
-      const permalink = inputPath.replace(/\.vzome$/i, "/");
+      const pathPrefix = eleventyConfig?.pathPrefix || '';
+      const vzomeUrl = pathPrefix + "/" + inputPath;
+      const permalink = "./" + filename + "/";
       // Return the content - the layout will be applied by 11ty
 
-      return {
+      const data = {
         title: filename,
         description: `${filename} - A uniform polyhedron from the ${folder} collection`,
         image: `/images/${filename}.png`,
@@ -52,6 +53,7 @@ export default function (eleventyConfig)
         vzome: vzomeUrl,
         permalink
       };
+      return data;
     },
 
     // `compile` is called once per .vzome file in the input directory
