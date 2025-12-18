@@ -4,24 +4,6 @@ layout: home.html
 
 ## Uniform Polyhedra modeled in [vZome](https://www.vzome.com/home).
 
-<!-- {% for post in collections.all | reverse %}
-  <div class="blog-title-card">
-    <a href="{{ post.url }}">
-      <img
-        class="blog-title-card-image"
-        src="/assets/{{ post.data.image }}"
-        alt="{{ post.title }}"
-      >
-      <div class="blog-title-card-overlay">
-        <div class="blog-title-card-text">
-          {{ post.data.title }}
-        </div>
-      </div>
-    </a>
-  </div>
-{% endfor %}
- -->
-
 ### Regulars
 
 {% for item in collections.regulars %}

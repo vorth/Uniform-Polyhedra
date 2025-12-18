@@ -40,7 +40,7 @@ export default function (eleventyConfig)
       const parts = inputPath.split('/');
       const filename = parts[parts.length - 1].replace('.vZome', '');
       const folder = parts.length > 1 ? parts[parts.length - 2] : '';
-      const vzomeUrl = inputPath.replace(/^\./, "");
+      const vzomeUrl = "../../" + inputPath;
       const permalink = inputPath.replace(/\.vzome$/i, "/");
       // Return the content - the layout will be applied by 11ty
 
